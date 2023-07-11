@@ -16,8 +16,6 @@ galleryEl.insertAdjacentHTML("beforeend", markup.join(""));
 galleryEl.addEventListener("click", onClick);
 
 
-
-
 function onClick(event){
 
     event.preventDefault();
@@ -26,16 +24,11 @@ function onClick(event){
         return;
     }
 
-    let lighbox = new SimpleLightbox('.gallery a', { captionsData: `"${event.target.alt}"`,captionDelay: 250, captionPosition: "bottom"});
-
-    lighbox.on("show.simplelightbox");
-  
-    
-
+    let lighbox = new SimpleLightbox('.gallery a', { captionsData: "alt" ,captionDelay: 250, captionPosition: "bottom"});
 
 };
 
 
 
 
-console.log(galleryItems);
+
