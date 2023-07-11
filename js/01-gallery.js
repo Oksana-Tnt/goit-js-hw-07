@@ -1,5 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
+
 const galleryEl = document.querySelector(".gallery");
    
     const markup = galleryItems.map(({ preview, original, description}) => 
@@ -13,7 +14,6 @@ const galleryEl = document.querySelector(".gallery");
       />
     </a>
   </li>`
-
 );
 
 galleryEl.insertAdjacentHTML("beforeend", markup.join(""));
@@ -51,7 +51,6 @@ function closeModalView(event){
     if(instance.visible() && event.code === "Escape"){
         instance.close();
     }
-
 };
 
 
