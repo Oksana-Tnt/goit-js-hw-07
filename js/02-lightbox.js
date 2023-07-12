@@ -13,20 +13,10 @@ const galleryEl = document.querySelector(".gallery");
 
 galleryEl.insertAdjacentHTML("beforeend", markup.join(""));
 
-galleryEl.addEventListener("click", onClick);
+
+let lighbox = new SimpleLightbox('.gallery a', { captionsData: "alt" ,captionDelay: 250, captionPosition: "bottom"});
 
 
-function onClick(event){
-
-    event.preventDefault();
-
-    if(!event.target.classList.contains("gallery__image")){
-        return;
-    }
-
-    let lighbox = new SimpleLightbox('.gallery a', { captionsData: "alt" ,captionDelay: 250, captionPosition: "bottom"});
-
-};
 
 
 
